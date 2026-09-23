@@ -1,5 +1,210 @@
 import { Plan } from '../types';
 
+export type NotificationType = 'reminder' | 'updated' | 'cancelled';
+export type NotificationChangedField = 'fecha' | 'hora' | 'ubicacion';
+
+export interface NotificationItem {
+  id: number;
+  title: string;
+  text: string;
+  date: string;
+  time: string;
+  type: NotificationType;
+  unread: boolean;
+  changedField?: NotificationChangedField;
+  location?: string;
+}
+
+export type EventIconName = 'book' | 'coffee' | 'basketball';
+
+export interface EnrolledEvent {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  location: string;
+  participants: number;
+  capacity: number;
+  visibility: string;
+  category: string;
+  icon: EventIconName;
+  iconColor: string;
+}
+
+export interface ChatItem {
+  id: number;
+  title: string;
+  lastMessage: string;
+  lastTime: string;
+  participants: number;
+  eventColor: string;
+}
+
+export interface ChatMessage {
+  id: number;
+  sender: string;
+  message: string;
+  time: string;
+  mine?: boolean;
+}
+
+/* =========================================================
+   NOTIFICACIONES
+========================================================= */
+
+export const mockNotifications: NotificationItem[] = [
+  {
+    id: 1,
+    title: 'Estudiar en starbucks',
+    text: 'Es hoy.',
+    date: '07 de Septiembre',
+    time: '7 p.m.',
+    type: 'reminder',
+    unread: true,
+  },
+  {
+    id: 2,
+    title: 'Cafe centenario',
+    text: 'Se actualizó la fecha del evento.',
+    date: '07 de Septiembre',
+    time: '7 p.m.',
+    type: 'updated',
+    unread: true,
+    changedField: 'fecha',
+  },
+  {
+    id: 3,
+    title: 'Hacer tarea en starbucks',
+    text: 'El plan fue cancelado.',
+    date: '',
+    time: '',
+    type: 'cancelled',
+    unread: true,
+  },
+  {
+    id: 4,
+    title: 'Retas de basket mujeres',
+    text: 'Se actualizó la información del lugar.',
+    date: '',
+    time: '',
+    type: 'updated',
+    unread: false,
+    changedField: 'ubicacion',
+    location: 'Canchas Hector Espino',
+  },
+];
+
+/* =========================================================
+   EVENTOS INSCRITOS
+========================================================= */
+
+export const mockEnrolledEvents: EnrolledEvent[] = [
+  {
+    id: 1,
+    title: 'Estudiar en Starbucks',
+    description: 'Sesión de estudio y convivencia.',
+    date: '03 de Septiembre',
+    time: '4:00 P.M.',
+    location: 'Starbucks',
+    participants: 4,
+    capacity: 8,
+    visibility: 'Mi licenciatura',
+    category: 'Estudio',
+    icon: 'book',
+    iconColor: '#B79CFF',
+  },
+  {
+    id: 2,
+    title: 'Cafe centenario',
+    description:
+      'Hacer amigas de la misma licenciatura que yo para tomar cafecito y hablar de la vida.',
+    date: '05 de Septiembre',
+    time: '6:00 P.M.',
+    location: 'Cafe centenario No.165, col. Centenario',
+    participants: 4,
+    capacity: 5,
+    visibility: 'Mi licenciatura',
+    category: 'Tiempo de calidad',
+    icon: 'coffee',
+    iconColor: '#FF9FA4',
+  },
+  {
+    id: 3,
+    title: 'Retas de basket mujeres',
+    description: 'Partido amistoso de basket entre estudiantes.',
+    date: '10 de Septiembre',
+    time: '5:00 P.M.',
+    location: 'Cancha universitaria',
+    participants: 8,
+    capacity: 12,
+    visibility: 'Pública',
+    category: 'Deportes',
+    icon: 'basketball',
+    iconColor: '#86D6A0',
+  },
+];
+
+/* =========================================================
+   CHATS
+========================================================= */
+
+export const mockChatList: ChatItem[] = [
+  {
+    id: 1,
+    title: 'Estudiar en Starbucks',
+    lastMessage: '¿A qué hora nos vemos?',
+    lastTime: '3:45 P.M.',
+    participants: 4,
+    eventColor: '#B79CFF',
+  },
+  {
+    id: 2,
+    title: 'Cafe centenario',
+    lastMessage: 'Yo llego un poquito antes.',
+    lastTime: '5:32 P.M.',
+    participants: 5,
+    eventColor: '#FF9FA4',
+  },
+  {
+    id: 3,
+    title: 'Retas de basket mujeres',
+    lastMessage: '¿Quién lleva el balón?',
+    lastTime: '4:20 P.M.',
+    participants: 8,
+    eventColor: '#86D6A0',
+  },
+];
+
+export const mockChatMessages: ChatMessage[] = [
+  {
+    id: 1,
+    sender: 'Sofía',
+    message: 'Holaaa, ¿sí nos vemos hoy?',
+    time: '5:30 P.M.',
+  },
+  {
+    id: 2,
+    sender: 'Valeria',
+    message: 'Siii, yo ya confirmé.',
+    time: '5:33 P.M.',
+  },
+  {
+    id: 3,
+    sender: 'Tú',
+    message: 'Yo también, nos vemos a las 6 ✨',
+    time: '5:35 P.M.',
+    mine: true,
+  },
+  {
+    id: 4,
+    sender: 'Sofía',
+    message: 'Perfecto, nos vemos en Cafe centenario.',
+    time: '5:42 P.M.',
+  },
+];
+
+
 export const mockPlanes: Plan[] = [
   {
     id: 1,
@@ -90,6 +295,7 @@ export const mockPlanes: Plan[] = [
     cupoMaximo: 150,
     inscritos: 85,
     tipoUbicacion: 'externa',
+    edificioCampus: 'Ubicación externa',
     visibilidad: 'carrera',
     categoria: 'fiesta',
     color: '#8b5cf6', // violet

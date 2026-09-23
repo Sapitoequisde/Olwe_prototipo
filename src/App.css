@@ -2172,3 +2172,946 @@
     margin-top: 8px;
   }
 }
+
+/* =========================================================
+   OLWE — VISTAS ADICIONALES DEL PROTOTIPO
+========================================================= */
+
+.olwe-section-content {
+  flex: 1;
+  min-width: 0;
+  padding: 28px 8%;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.olwe-page-header {
+  border-bottom: 1px solid #aeb9c6;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+.olwe-page-header h1 {
+  margin: 0;
+  color: #5a9cff;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.olwe-search-wrapper {
+  width: min(100%, 580px);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #4d92ff;
+  border-radius: 18px;
+  padding: 0 12px;
+  margin-bottom: 28px;
+  background: #fff;
+}
+
+.olwe-search-wrapper span {
+  color: #559bff;
+  font-size: 15px;
+}
+
+.olwe-search-wrapper input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 10px;
+  color: #334155;
+}
+
+.olwe-search-wrapper input::placeholder {
+  color: #8a96a5;
+}
+
+.olwe-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 720px;
+}
+
+.olwe-event-card {
+  width: 100%;
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 15px;
+  border: 1px solid #4d92ff;
+  border-radius: 14px;
+  background: #fff;
+  color: #334155;
+  text-align: left;
+}
+
+.olwe-event-card-button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.olwe-event-card-button:hover,
+.olwe-chat-card:hover {
+  background: #f8fbff;
+}
+
+.olwe-event-card.is-cancelled {
+  opacity: 0.68;
+}
+
+.olwe-event-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffb1b1;
+  color: #fff;
+  font-size: 15px;
+}
+
+.olwe-event-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.olwe-event-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.olwe-event-main h3 {
+  margin: 0;
+  color: #2e3137;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.olwe-event-main p {
+  margin: 4px 0 7px;
+  color: #718096;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.olwe-event-meta {
+  display: flex;
+  gap: 18px;
+  color: #6f7d8f;
+  font-size: 8px;
+}
+
+.olwe-unread-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #559bff;
+}
+
+.olwe-card-arrow {
+  color: #559bff;
+  font-size: 21px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   CHATS
+========================================================= */
+
+.olwe-chat-card {
+  width: 100%;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 15px;
+  border: 1px solid #4d92ff;
+  border-radius: 14px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.olwe-chat-avatar {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef5ff;
+  font-size: 17px;
+}
+
+.olwe-chat-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.olwe-chat-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.olwe-chat-title-row h3 {
+  margin: 0;
+  color: #2e3137;
+  font-size: 12px;
+}
+
+.olwe-chat-title-row span {
+  color: #8a96a5;
+  font-size: 8px;
+}
+
+.olwe-chat-main p {
+  margin: 5px 0 3px;
+  color: #718096;
+  font-size: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.olwe-chat-main small {
+  color: #559bff;
+  font-size: 8px;
+}
+
+.olwe-chat-page {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.olwe-chat-header {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 30px;
+  border-bottom: 1px solid #dce3eb;
+}
+
+.olwe-chat-header h1 {
+  margin: 0;
+  color: #2e3137;
+  font-size: 14px;
+}
+
+.olwe-chat-header span {
+  color: #7d8998;
+  font-size: 9px;
+}
+
+.olwe-back-button {
+  border: 0;
+  background: transparent;
+  color: #559bff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.olwe-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 12%;
+  background: #fafcff;
+}
+
+.olwe-message-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.olwe-message-row.is-mine {
+  justify-content: flex-end;
+}
+
+.olwe-message {
+  max-width: min(65%, 420px);
+  padding: 9px 12px;
+  border-radius: 14px 14px 14px 3px;
+  background: #fff;
+  border: 1px solid #e1e7ee;
+}
+
+.olwe-message-row.is-mine .olwe-message {
+  border-radius: 14px 14px 3px 14px;
+  background: #eef5ff;
+  border-color: #cfe0ff;
+}
+
+.olwe-message strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #559bff;
+  font-size: 9px;
+}
+
+.olwe-message p {
+  margin: 0;
+  color: #3d4857;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.olwe-message small {
+  display: block;
+  margin-top: 5px;
+  color: #8a96a5;
+  font-size: 7px;
+  text-align: right;
+}
+
+.olwe-chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 13px 12%;
+  border-top: 1px solid #dce3eb;
+  background: #fff;
+}
+
+.olwe-chat-input input {
+  flex: 1;
+  height: 32px;
+  border: 1px solid #559bff;
+  border-radius: 18px;
+  padding: 0 14px;
+  outline: none;
+  font: inherit;
+  font-size: 10px;
+}
+
+.olwe-chat-input button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: #559bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   PERFIL
+========================================================= */
+
+.profile-layout {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 24px;
+}
+
+.profile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.profile-menu button {
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 12px;
+  background: transparent;
+  color: #778393;
+  font: inherit;
+  font-size: 9px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profile-menu button:hover,
+.profile-menu button.is-active {
+  background: #eef5ff;
+  color: #478dff;
+}
+
+.profile-menu .profile-logout-button {
+  margin-top: 15px;
+  color: #e05268;
+}
+
+.profile-panel {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #dce3eb;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.profile-visual {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e4e9ef;
+}
+
+.profile-avatar {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #559bff;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.profile-visual h2 {
+  margin: 0 0 4px;
+  color: #2e3137;
+  font-size: 16px;
+}
+
+.profile-visual p {
+  margin: 0;
+  color: #7b8796;
+  font-size: 9px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.profile-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #64748b;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #559bff;
+  border-radius: 13px;
+  padding: 8px 11px;
+  background: #fff;
+  color: #334155;
+  outline: none;
+  font: inherit;
+  font-size: 10px;
+}
+
+.profile-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.profile-panel-heading {
+  margin-bottom: 22px;
+}
+
+.profile-panel-heading h2 {
+  margin: 0 0 6px;
+  color: #2e3137;
+  font-size: 15px;
+}
+
+.profile-panel-heading p {
+  margin: 0;
+  color: #7b8796;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.profile-option-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #dce3eb;
+  border-radius: 13px;
+  padding: 13px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.profile-option-card:hover {
+  border-color: #559bff;
+  background: #f8fbff;
+}
+
+.profile-option-card > span:first-child {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef5ff;
+}
+
+.profile-option-card div {
+  flex: 1;
+}
+
+.profile-option-card strong {
+  color: #334155;
+  font-size: 10px;
+}
+
+.profile-option-card p {
+  margin: 4px 0 0;
+  color: #7b8796;
+  font-size: 8px;
+}
+
+.profile-option-card > span:last-child {
+  color: #559bff;
+  font-size: 18px;
+}
+
+.olwe-primary-button,
+.olwe-secondary-button,
+.olwe-danger-button {
+  border: 0;
+  border-radius: 18px;
+  padding: 9px 17px;
+  font: inherit;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.olwe-primary-button {
+  align-self: flex-start;
+  background: #559bff;
+  color: #fff;
+}
+
+.olwe-primary-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.olwe-secondary-button {
+  background: #eef2f6;
+  color: #657386;
+}
+
+.olwe-danger-button {
+  background: #fff0f2;
+  color: #e05268;
+}
+
+.olwe-form-error {
+  margin: -5px 0 0;
+  color: #e05268;
+  font-size: 8px;
+}
+
+.olwe-form-success {
+  margin: -5px 0 0;
+  color: #2e9d68;
+  font-size: 8px;
+}
+
+.olwe-inline-back {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 12px;
+  color: #559bff;
+  font: inherit;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   HISTORIAL
+========================================================= */
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e0e6ed;
+  border-radius: 12px;
+}
+
+.history-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef8f2;
+  color: #2e9d68;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.history-item strong {
+  color: #334155;
+  font-size: 10px;
+}
+
+.history-item p {
+  margin: 4px 0 0;
+  color: #7b8796;
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   REPORTE
+========================================================= */
+
+.report-success {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.report-success > div {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef8f2;
+  color: #2e9d68;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.report-success h3 {
+  margin: 13px 0 5px;
+  color: #334155;
+  font-size: 13px;
+}
+
+.report-success p {
+  margin: 0 0 18px;
+  color: #7b8796;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   MODALES DE EVENTOS / CONFIRMACIONES
+========================================================= */
+
+.olwe-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(39, 39, 39, 0.56);
+}
+
+.olwe-modal-front {
+  z-index: 90;
+}
+
+.olwe-detail-modal {
+  width: min(100%, 540px);
+  max-height: 88vh;
+  overflow: auto;
+  border: 1px solid #5897ff;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.olwe-modal-header {
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  border-bottom: 1px solid #dce3eb;
+  padding: 0 12px;
+}
+
+.olwe-modal-header h2 {
+  margin: 0;
+  color: #2e3137;
+  font-size: 12px;
+  text-align: center;
+}
+
+.olwe-modal-header button {
+  border: 0;
+  background: transparent;
+  color: #559bff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.olwe-detail-content {
+  padding: 25px 30px 28px;
+}
+
+.olwe-detail-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #ffb1b1;
+  color: #fff;
+}
+
+.olwe-detail-content h3 {
+  margin: 0 0 13px;
+  color: #2e3137;
+  font-size: 16px;
+  text-align: center;
+}
+
+.olwe-detail-description {
+  margin: 0 auto 24px;
+  max-width: 430px;
+  color: #64748b;
+  font-size: 9px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.olwe-detail-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.olwe-detail-fields p {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 0;
+  color: #7b8796;
+  font-size: 9px;
+}
+
+.olwe-detail-fields b {
+  max-width: 60%;
+  color: #334155;
+  text-align: right;
+}
+
+.olwe-detail-content > .olwe-danger-button {
+  display: block;
+  margin: 25px auto 0;
+}
+
+.olwe-confirm-modal {
+  width: min(100%, 390px);
+  padding: 30px;
+  border-radius: 18px;
+  background: #fff;
+  text-align: center;
+}
+
+.olwe-confirm-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #fff0f2;
+  color: #e05268;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.olwe-confirm-modal h2 {
+  margin: 0 0 8px;
+  color: #2e3137;
+  font-size: 15px;
+}
+
+.olwe-confirm-modal p {
+  margin: 0 auto 22px;
+  max-width: 310px;
+  color: #718096;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.olwe-confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 760px) {
+  .olwe-section-content {
+    padding: 22px 18px;
+  }
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-menu .profile-logout-button {
+    margin-top: 0;
+  }
+
+  .olwe-chat-messages {
+    padding: 20px 18px;
+  }
+
+  .olwe-chat-input {
+    padding: 10px 18px;
+  }
+
+  .olwe-message {
+    max-width: 80%;
+  }
+}
+
+/* =========================================================
+   NOTIFICACIONES
+========================================================= */
+
+.notification-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-card:hover {
+  background: #fbfdff;
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.notification-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.notification-icon-reminder {
+  background: #fff1d5;
+  color: #a97724;
+}
+
+.notification-icon-updated {
+  background: #d9f3ff;
+  color: #159bd0;
+}
+
+.notification-icon-cancelled {
+  background: #ffe0e5;
+  color: #d91f45;
+}
+
+.notification-highlight {
+  color: #e3314b;
+  font-weight: 600;
+}
+
+.notification-card .olwe-event-meta {
+  display: flex;
+  gap: 18px;
+}
+
+.notification-card .olwe-event-meta strong {
+  font-weight: 500;
+}
+
+.notification-card.is-cancelled .olwe-event-main h3 {
+  color: #555b64;
+}
+
+.notification-card.is-cancelled .olwe-event-main p {
+  color: #8793a3;
+}
+
+.notification-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification-card .olwe-unread-dot {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  margin: 0;
+  border-radius: 50%;
+  background: #428cff;
+  pointer-events: none;
+}
+
+.notification-card .olwe-event-main {
+  padding-right: 30px;
+} 
+
+/* =====================================================
+   ICONO DE CHAT
+===================================================== */
+
+.olwe-chat-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.olwe-chat-avatar svg {
+  width: 22px;
+  height: 22px;
+}
+
